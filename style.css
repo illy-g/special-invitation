@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #c2e209;
+  font-weight: bold;
+}
+
+*{/*caracteristicas generales de toda la pagina*/
+    background:transparent ;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 150%;
+    background-image: url("waterfall.gif");
+}/*fin*/
+
+.logo{/*configurar imagen*/
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 8%;
+    
+    
+}/*fin*/
+/*=============================================================================*/
+.cuadro{
+    display: inline-block;
+   
+  }
+  .texto-dinamico{
+      
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
+      font-size: clamp(1.1rem, 2vw, 2rem);
+      font-weight: bold;
+      color: #c52467;
+      position: relative;
+      animation-name: springy-text;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-fill-mode: backwards;
+  }
+  .texto-dinamico::before{
+    content: "♥️";
+  }
+  @keyframes springy-text {
+      0%   {
+        letter-spacing:0.2em;
+      }
+      100%   {
+        letter-spacing:0.1em;
+        color: #0A3871;
+      }
+    }
+/*======================================*/
+main{/*configurar los elementos generales de la zona principal*/
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+    
+}/*fin*/
+.text-area{/* configurar texto de la zona principal*/
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+    margin-left: -50px;
+
+}
+::placeholder { color: #0A3871; }
+    .text-area:focus {
+        outline: none;
+    }/*fin*/
+
+
+/*mmmmmmmmmmmmm*/
+
+.encriptado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  
+  .mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+  }
+  
+  .mensaje-encriptado h2 {
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343a40;
+  }
+  
+  .mensaje-encriptado p {
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+  }
+  
+  .encriptado img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+  }
+
+
+
+
+/*
+margin
+When one value is specified, it applies the same margin to all four sides.
+When two values are specified, the first margin applies to the top and bottom, the second to the left and right.
+When three values are specified, the first margin applies to the top, the second to the right and left, the third to the bottom.
+When four values are specified, the margins apply to the top, right, bottom, and left in that order (clockwise).
+*/
+/*
+.mensaje{
+    background: white;
+    background-image: url("imagenes/Muñeco.png");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    margin: 20px 0px 0px 98px;
+    padding-left: 20px;
+    position:static;
+    background-position: 10px 10px;
+    background-position-y:center;
+    background-position-x: center;
+    background-size: 100% 50%;
+    margin-left: 50px;
+    width: 80%;
+    height:110%;
+    resize:none;
+}
+/*
+h2 {
+    font-size: clamp(0.9rem, 1.5vw, 2rem);
+    font-weight: bold;
+    margin: 4% 0;
+    margin-top: -20%;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/*
+.mensaje:focus{
+    outline: none;
+    
+}*/
+.botones{
+    display: flex ;
+    margin-top: 18px;
+    gap: 20px;
+    margin-left: -50px;
+}
+/*boton encriptar*/
+.btn-encriptador{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 5px;
+    width: 250px;
+}
+/*transform: scale(1) rotate(10deg);*/
+.btn-encriptador:hover{ 
+    background: darkorange;
+    transform:scale(1) rotate(5deg);
+}
+
+/*boton desencriptar*/
+.btn-desencriptador{
+    background-color:#D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 67px;
+    width: 250px;
+}
+.btn-desencriptador:hover{ 
+    background: darkorange;
+    transform:scale(1) rotate(5deg);
+}
+/*verificar si el usuario escribio un texto o hay mensaje en pantalla*/
+.s-n-encontrado{
+    border: none;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 60px;
+    margin-top: 400px;
+    position: absolute;
+    height: 200px; 
+    width: 350px;
+    position: fixed;
+    background: white;
+    font-size: 20px;
+}
+.botones-dos{
+    display: flex ;
+    
+   position: 10px 10px;
+    gap: 150px;
+    margin-left: -10px;
+
+}
+
+/*boton de copiar*/
+.btn-copiar{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 100px;
+   
+    position: relative;
+    width: 150px;
+    position: fixed;
+    background-position-x: center;
+}
+.btn-copiar:hover{ 
+    background: darkorange;
+    transform:scale(1) rotate(5deg);
+}
+
+.btn-limpiar{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 110px;
+   
+    position: relative;
+    width: 150px;
+    position: fixed;
+    background-position-x: center;
+}
+.btn-limpiar:hover{ 
+    background: darkorange;
+    transform:scale(1) rotate(5deg);
+}
+
+.informacion{
+    color: #495057;
+    font-size: 18px;
+    margin-left: -50px;
+}
+
+
+
+/*
+@media screen and (max-width:480px){
+    
+    h1{
+    text-align: center;
+   }
+   nav{
+    position: static;
+   }
+    .caja,.principal,.mapa-contenido, .contenido-diferenciales,.video,.yomy{
+        width: auto;
+    }
+    .lista-diferenciales{
+        width: 100%;
+    }
+}
+*/
